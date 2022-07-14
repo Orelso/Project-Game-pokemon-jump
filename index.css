@@ -3,6 +3,16 @@
     margin: 0;
     overflow-x: hidden;
 }
+
+h1{
+   background-image: url(images/Gotta-Jumpem-All.png);
+   background-repeat: no-repeat;
+   margin-left: 450px;
+
+   width: 1200px;
+   height: 300px;
+}
+
 .game{
     width: 500px;
     height: 200px;
@@ -34,9 +44,23 @@
     position: relative;
     top: 110px;
     left: 500px;
-    animation: block 1s infinite linear;
+    animation: block 1.3s infinite linear;
     content: url("https://www.serebii.net/swordshield/pokemon/027.png");
 }
+
+#flyingPokemon{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -100px;
+    left: 500px;
+    animation: block 3s linear;
+    content: url("https://www.serebii.net/pokearth/sprites/pt/093.png");
+}
+
+
+
+
 @keyframes block{
     0%{left: 500px}
     100%{left: -20px}
