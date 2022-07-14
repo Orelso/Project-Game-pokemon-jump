@@ -2,12 +2,19 @@ var character = document.getElementById("character");
 var block = document.getElementById("block");
 var counter=0;
 
-const urlArray = [
+const images = [
     'https://www.serebii.net/swordshield/pokemon/001.png',
     'https://www.serebii.net/swordshield/pokemon/002.png',
     'https://www.serebii.net/swordshield/pokemon/003.png',
-  ]
+  ];
+
+  var index = 0;
   
+  function nextImage() {
+    index++;
+    index = index >= images.length ? images.length - 1 : index;
+    return images[index];
+  }
 
 function jump() {
     if(character.classList == "animate")
@@ -16,6 +23,12 @@ function jump() {
         character.classList.remove("animate");
     },300);
 }
+
+// document.querySelector("#block")function jump() {
+//     document.querySelector(images).src = nextImage();
+//    }
+
+
 
 var checkDead = setInterval(function() {
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
